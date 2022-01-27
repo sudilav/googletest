@@ -255,6 +255,6 @@ if (gtest_build_tests)
 endif()
 
 install(FILES ${gtest_BINARY_DIR}/libgtest.a ${gtest_BINARY_DIR}/libgtest_main.a DESTINATION /usr/lib)
-install(DIRECTORY ${gtest_SOURCE_DIR}/include DESTINATION /usr/include)
+install(DIRECTORY ${gtest_SOURCE_DIR}/include/gtest DESTINATION /usr/include)
 
 
