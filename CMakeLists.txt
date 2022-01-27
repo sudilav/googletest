@@ -253,3 +253,12 @@ if (gtest_build_tests)
   cxx_executable(gtest_xml_output_unittest_ test gtest)
   py_test(gtest_xml_output_unittest)
 endif()
+
+if(NOT Googletest_DIR STREQUAL "")
+    install(FILES ${gtest_BINARY_DIR}/libgtest.a ${gtest_BINARY_DIR}/libgtest_main.a DESTINATION ${Googletest_DIR}/lib)
+    install(DIRECTORY ${gtest_SOURCE_DIR}/include DESTINATION ${Googletest_DIR}/include)
+else()
+    install(FILES ${gtest_BINARY_DIR}/libgtest.a ${gtest_BINARY_DIR}/libgtest_main.a TYPE LIB)
+    install(DIRECTORY ${gtest_SOURCE_DIR}/include TYPE INCLUDE)
+endif()
+
