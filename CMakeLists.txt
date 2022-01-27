@@ -10,6 +10,7 @@
 option(BUILD_SHARED_LIBS "Build shared libraries (DLLs)." OFF)
 
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+SET(CMAKE_CXX_FLAGS  "-g -ggdb")
 
 # When other libraries are using a shared version of runtime libraries,
 # Google Test also has to use one.
